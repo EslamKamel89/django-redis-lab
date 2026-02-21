@@ -6,3 +6,11 @@ services:
     restart: always
     ports:
       - "6379:6379"
+  redisinsight:
+    image: redis/redisinsight
+    container_name: redis_insight
+    restart: always
+    depends_on:
+      - redis
+    ports:
+      - "5540:5540"

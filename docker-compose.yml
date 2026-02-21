@@ -1,0 +1,8 @@
+name: RedisInAction
+services:
+  redis:
+    image: redis:8.2.4-alpine3.22
+    container_name: redis_server
+    restart: always
+    ports:
+      - "6379:6379"

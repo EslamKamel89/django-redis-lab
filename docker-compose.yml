@@ -1,15 +1,25 @@
 name: RedisInAction
 services:
+  postgres:
+    image: postgres:18-alpine3.22
+    container_name: inventory_db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=inventory
+    # restart: always
   redis:
     image: redis:8.2.4-alpine3.22
     container_name: redis_server
-    restart: always
+    # restart: always
     ports:
       - "6379:6379"
   redisinsight:
     image: redis/redisinsight
     container_name: redis_insight
-    restart: always
+    # restart: always
     depends_on:
       - redis
     ports:

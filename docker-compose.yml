@@ -2,7 +2,7 @@ name: RedisInAction
 services:
   postgres:
     image: postgres:18-alpine3.22
-    container_name: inventory_db
+    container_name: postgres_db
     ports:
       - "5432:5432"
     environment:
@@ -24,3 +24,14 @@ services:
       - redis
     ports:
       - "5540:5540"
+  django:
+    build: .
+    container_name: django
+    depends_on:
+      - redis
+      - postgres
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:8000"
+    command: sh -c "python manage.py runserver 0.0.0.0:8000"

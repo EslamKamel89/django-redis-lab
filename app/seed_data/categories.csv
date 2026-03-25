@@ -1,0 +1,16 @@
+name,slug,parent_slug,is_active,level
+Electronics,electronics,\N,true,0
+Computers,computers,electronics,true,1
+Laptops,laptops,computers,true,2
+Desktops,desktops,computers,true,2
+Mobile Phones,mobile-phones,electronics,true,1
+Accessories,accessories,electronics,true,1
+Headphones,headphones,accessories,true,2
+Chargers,chargers,accessories,true,2
+Home Appliances,home-appliances,\N,true,0
+Kitchen Appliances,kitchen-appliances,home-appliances,true,1
+Cleaning Appliances,cleaning-appliances,home-appliances,true,1
+Books,books,\N,true,0
+Fiction,fiction,books,true,1
+Non-Fiction,non-fiction,books,true,1
+Technology,technology-books,books,true,1

@@ -10,6 +10,8 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=inventory
     # restart: always
+    # volumes:
+    #   - ./data/postgres:/var/lib/postgresql/data
   redis:
     image: redis:8.2.4-alpine3.22
     container_name: redis_server
@@ -34,4 +36,4 @@ services:
       - ./app:/app
     ports:
       - "8000:8000"
-    command: sh -c "python manage.py runserver 0.0.0.0:8000"
+    command: sh /app/entrypoint.sh

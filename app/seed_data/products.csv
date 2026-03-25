@@ -1,0 +1,16 @@
+category_slug,name,slug,description,is_digital,is_active,price
+laptops,MacBook Pro 14 M3,macbook-pro-14-m3,Apple laptop with M3 chip,false,true,2499.99
+laptops,Dell XPS 13 Plus,dell-xps-13-plus,Compact high-performance ultrabook,false,true,1799.50
+desktops,HP Pavilion Desktop,hp-pavilion-desktop,Mid-range desktop for home use,false,true,899.99
+mobile-phones,iPhone 15 Pro Max,iphone-15-pro-max,Flagship Apple smartphone,false,true,1199.00
+mobile-phones,Samsung Galaxy S24 Ultra,samsung-galaxy-s24-ultra,Premium Android smartphone,false,true,1099.00
+headphones,Sony WH-1000XM5 Headphones,sony-wh1000xm5,Noise cancelling wireless headphones,false,true,349.99
+headphones,Apple AirPods Pro 2,airpods-pro-2,Wireless earbuds with ANC,false,true,249.99
+chargers,Anker Fast Charger 65W,anker-fast-charger-65w,USB-C fast charging adapter,false,true,39.99
+kitchen-appliances,Ninja Air Fryer XL,ninja-air-fryer-xl,Large capacity air fryer,false,true,149.99
+cleaning-appliances,Dyson V11 Vacuum,dyson-v11-vacuum,Cordless powerful vacuum cleaner,false,true,599.99
+fiction,The Great Gatsby,the-great-gatsby,Classic novel by F. Scott Fitzgerald,true,true,9.99
+non-fiction,Sapiens: A Brief History of Humankind,sapiens-book,Popular science book by Yuval Noah Harari,true,true,14.99
+technology-books,Designing Data-Intensive Applications,ddia-book,Advanced system design concepts,true,true,39.99
+technology-books,Clean Code,clean-code-book,Best practices for writing clean software,true,true,29.99
+accessories,Logitech MX Master 3S Mouse,mx-master-3s,Ergonomic wireless mouse,false,true,99.99

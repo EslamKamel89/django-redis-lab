@@ -2,6 +2,7 @@ import csv
 from decimal import Decimal
 from pathlib import Path
 
+from django.contrib.auth.models import User
 from django.core.management.base import BaseCommand
 from django.db import transaction
 from inventory.models import Category, Product
@@ -14,6 +15,19 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs) -> str | None:
         with transaction.atomic():
+            self.stdout.write("Creating super user .....")
+            user, created = User.objects.get_or_create(
+                username="admin",
+                defaults={
+                    "email": "admin@gmail.com",
+                    "is_staff": True,
+                    "is_superuser": True,
+                    "is_active": True,
+                },
+            )
+            if created:
+                user.set_password("password")
+                user.save()
             self.stdout.write("Truncating categories and products table .....")
             Product.objects.all().delete()
             Category.objects.all().delete()
